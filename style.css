@@ -1,0 +1,216 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Alkalami", serif;
+	/* background: rgba(142, 50, 0, 0.3); */
+}
+
+div.controls {
+	display: none;
+}
+
+@media (max-width: 400px) {
+	h1 {
+		font-size: 3.5rem !important;
+	}
+	h5 {
+		font-size: 2rem !important;
+	}
+	html {
+		zoom: 42%;
+	}
+	div.controls {
+		display: block;
+	}
+	footer.controls {
+		display: none;
+	}
+	div.controls button {
+		font-size: 2rem;
+	}
+}
+
+h5 {
+	color: #8e3200;
+}
+
+h1 {
+	color: #8e3200;
+	padding: 0;
+	margin: 0;
+	font-size: 3rem;
+}
+
+h1::selection {
+	background: rgba(142, 50, 0, 0.4) !important;
+}
+h5::selection {
+	background: rgba(142, 50, 0, 0.4);
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	bottom: 0;
+	padding: 0.5rem 0;
+	width: 100%;
+	background: #dcc1b2;
+}
+
+.active .text {
+	opacity: 0.2;
+}
+
+#root {
+	display: grid;
+	place-items: center;
+	padding-top: 2rem;
+	padding-bottom: 5rem;
+}
+
+.btn-brown {
+	box-shadow: 2px 2px 12px #555;
+	background-color: #8e3200;
+	color: #fff;
+	padding-top: 0.7rem;
+	border: none !important;
+	border-radius: 5px;
+	padding: 0.8rem 1.7rem 0.4rem;
+	background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
+	transition: all 0.3s;
+}
+
+.btn-brown:active {
+	box-shadow: none;
+}
+
+.btn-brown:hover,
+.btn-brown:focus,
+.btn-brown:active {
+	color: #fff;
+	background-color: #8e3200;
+	background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
+}
+
+.btn-brown:disabled {
+	cursor: not-allowed;
+	background-color: rgba(142, 50, 0, 0.9);
+	background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
+	color: #fff;
+}
+
+.game-box {
+	user-select: none;
+	border-radius: 10px;
+	width: 52rem;
+	height: 52.8rem;
+	padding: 1rem 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	background-color: #8e3200;
+	background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
+}
+
+.game-box img {
+	position: absolute;
+}
+
+.pixel-box {
+	background-color: #8e3200;
+	background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
+	width: 5rem;
+	height: 5rem;
+	border: 3px solid #ecb390;
+	font-size: 2.2rem;
+	color: #f5c6aa;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.text {
+	display: block;
+	padding-top: 1rem;
+}
+
+.user {
+	width: 30px;
+	height: 50px;
+}
+
+.snake-img1 {
+	opacity: 0.7;
+	left: 9%;
+	top: 8%;
+}
+
+.snake-img2 {
+	right: 32%;
+	height: 48%;
+	top: 15%;
+	opacity: 0.8;
+}
+
+.snake-img3 {
+	top: 36%;
+	height: 45%;
+	opacity: 0.7;
+}
+
+.snake-img4 {
+	bottom: 19%;
+	left: 27%;
+	opacity: 0.7;
+}
+
+.snake-img5 {
+	right: 13%;
+	bottom: 19%;
+	opacity: 0.7;
+}
+
+.snake-img6 {
+	opacity: 0.7;
+	transform: rotate(290deg);
+	bottom: -8%;
+	left: 33%;
+}
+
+.ladder-img {
+	width: 8%;
+	filter: invert(298%) sepia(152%) saturate(659%) hue-rotate(180deg)
+		brightness(94%) contrast(245%);
+	opacity: 0.6;
+}
+
+.ladder-img1 {
+	height: 70%;
+	top: 5%;
+	left: 12%;
+	rotate: 15deg;
+}
+
+.ladder-img2 {
+	height: 50%;
+	right: 2.5%;
+	top: 5%;
+}
+
+.ladder-img3 {
+	height: 20%;
+	rotate: -27deg;
+	left: 47%;
+	top: 17%;
+}
+
+.ladder-img4 {
+	right: 36%;
+	bottom: 14%;
+	rotate: 20deg;
+}

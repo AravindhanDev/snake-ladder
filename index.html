@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Snake & Ladder</title>
+		<!-- style sheet  -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<!-- scripts  -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+			crossorigin="anonymous"
+		></script>
+		<script src="app.js" defer></script>
+	</head>
+	<body>
+		<main id="root">
+			<h1 id="comments">Snake & Ladder <span>🐍</span></h1>
+			<h5 id="bestplay" class="d-none"></h5>
+			<div class="game-box">
+				<div class="images">
+					<img
+						class="snake-img snake-img1 animate__animated animate__zoomIn animate__slow"
+						src="./images/snake1.png"
+						alt=""
+					/>
+					<img
+						class="snake-img snake-img2 animate__animated animate__zoomIn animate__slow"
+						src="./images/snake2.png"
+						alt=""
+					/>
+					<img
+						class="snake-img snake-img3 animate__animated animate__zoomIn animate__slow"
+						src="./images/snake3.png"
+						alt=""
+					/>
+					<img
+						class="snake-img snake-img4 animate__animated animate__zoomIn animate__slow"
+						src="./images/snake4.png"
+						alt=""
+					/>
+					<img
+						class="snake-img snake-img5 animate__animated animate__zoomIn animate__slow"
+						src="./images/snake5.png"
+						alt=""
+					/>
+					<img
+						class="snake-img snake-img6 animate__animated animate__zoomIn animate__slow"
+						src="./images/snake6.png"
+						alt=""
+					/>
+					<img
+						class="ladder-img ladder-img1 animate__animated animate__zoomIn"
+						src="./images/ladder.png"
+						alt=""
+					/>
+					<img
+						class="ladder-img ladder-img2 animate__animated animate__zoomIn"
+						src="./images/ladder.png"
+						alt=""
+					/>
+					<img
+						class="ladder-img ladder-img3 animate__animated animate__zoomIn"
+						src="./images/ladder.png"
+						alt=""
+					/>
+					<img
+						class="ladder-img ladder-img4 animate__animated animate__zoomIn"
+						src="./images/ladder.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="100">
+					<span class="text">100</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="99">
+					<span class="text">99</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="98">
+					<span class="text">98</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="97">
+					<span class="text">97</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="96">
+					<span class="text">96</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="95">
+					<span class="text">95</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="94">
+					<span class="text">94</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="93">
+					<span class="text">93</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="92">
+					<span class="text">92</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="91">
+					<span class="text">91</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="81">
+					<span class="text">81</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="82">
+					<span class="text">82</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="83">
+					<span class="text">83</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="84">
+					<span class="text">84</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="85">
+					<span class="text">85</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="86">
+					<span class="text">86</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="87">
+					<span class="text">87</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="88">
+					<span class="text">88</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="89">
+					<span class="text">89</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="90">
+					<span class="text">90</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="80">
+					<span class="text">80</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="79">
+					<span class="text">79</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="78">
+					<span class="text">78</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="77">
+					<span class="text">77</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="76">
+					<span class="text">76</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="75">
+					<span class="text">75</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="74">
+					<span class="text">74</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="73">
+					<span class="text">73</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="72">
+					<span class="text">72</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="71">
+					<span class="text">71</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="61">
+					<span class="text">61</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="62">
+					<span class="text">62</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="63">
+					<span class="text">63</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="64">
+					<span class="text">64</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="65">
+					<span class="text">65</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="66">
+					<span class="text">66</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="67">
+					<span class="text">67</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="68">
+					<span class="text">68</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="69">
+					<span class="text">69</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="70">
+					<span class="text">70</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="60">
+					<span class="text">60</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="59">
+					<span class="text">59</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="58">
+					<span class="text">58</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="57">
+					<span class="text">57</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="56">
+					<span class="text">56</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="55">
+					<span class="text">55</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="54">
+					<span class="text">54</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="53">
+					<span class="text">53</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="52">
+					<span class="text">52</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="51">
+					<span class="text">51</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="41">
+					<span class="text">41</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="42">
+					<span class="text">42</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="43">
+					<span class="text">43</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="44">
+					<span class="text">44</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="45">
+					<span class="text">45</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="46">
+					<span class="text">46</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="47">
+					<span class="text">47</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="48">
+					<span class="text">48</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="49">
+					<span class="text">49</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="50">
+					<span class="text">50</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="40">
+					<span class="text">40</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="39">
+					<span class="text">39</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="38">
+					<span class="text">38</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="37">
+					<span class="text">37</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="36">
+					<span class="text">36</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="35">
+					<span class="text">35</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="34">
+					<span class="text">34</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="33">
+					<span class="text">33</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="32">
+					<span class="text">32</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="31">
+					<span class="text">31</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="21">
+					<span class="text">21</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="22">
+					<span class="text">22</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="23">
+					<span class="text">23</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="24">
+					<span class="text">24</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="25">
+					<span class="text">25</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="26">
+					<span class="text">26</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="27">
+					<span class="text">27</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="28">
+					<span class="text">28</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="29">
+					<span class="text">29</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="30">
+					<span class="text">30</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="20">
+					<span class="text">20</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="19">
+					<span class="text">19</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="18">
+					<span class="text">18</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="17">
+					<span class="text">17</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="16">
+					<span class="text">16</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="15">
+					<span class="text">15</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="14">
+					<span class="text">14</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="13">
+					<span class="text">13</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="12">
+					<span class="text">12</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="11">
+					<span class="text">11</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="1">
+					<span class="text">1</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="2">
+					<span class="text">2</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="3">
+					<span class="text">3</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="4">
+					<span class="text">4</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="5">
+					<span class="text">5</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="6">
+					<span class="text">6</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="7">
+					<span class="text">7</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="8">
+					<span class="text">8</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="9">
+					<span class="text">9</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+				<div class="pixel-box" id="10">
+					<span class="text">10</span>
+					<img
+						class="user animate_animated animate__bounceInDown d-none"
+						src="./images/user2.png"
+						alt=""
+					/>
+				</div>
+			</div>
+			<br />
+			<div class="controls">
+				<button class="btn-brown" id="reset">RESET</button> &nbsp;
+				<button class="btn-brown" id="roll">ROLL</button> &nbsp;
+				<button class="btn-brown" id="result">?</button>
+			</div>
+		</main>
+		<footer class="controls">
+			<button class="btn-brown" id="reset">RESET</button> &nbsp;
+			<button class="btn-brown" id="roll">ROLL</button> &nbsp;
+			<button class="btn-brown" id="result">?</button>
+		</footer>
+	</body>
+</html>
